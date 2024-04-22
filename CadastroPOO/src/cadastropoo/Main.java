@@ -1,68 +1,355 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package cadastropoo;
-
 import model.PessoaFisica;
 import model.PessoaFisicaRepo;
 import model.PessoaJuridica;
 import model.PessoaJuridicaRepo;
+import java.util.Scanner;
 
-
-
-/**
- *
- * @author henrique
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        PessoaFisicaRepo repo1 = new PessoaFisicaRepo();
-        
-        PessoaFisica pf1 = new PessoaFisica("Henrique", 1, 20, "156.895.666-59");
-        PessoaFisica pf2 = new PessoaFisica("Maria", 2, 76, "756.666.666-59");
-        
-        repo1.inserir(pf1);
-        repo1.inserir(pf2);
-        repo1.persistir("pessoasfisicas");
-        
-        PessoaFisicaRepo repo2 = new PessoaFisicaRepo();
-        
-        repo2.recuperar("pessoasfisicas");
-        repo2.obterTodos();
-        
-        PessoaJuridicaRepo repo3 = new PessoaJuridicaRepo();
-        
-        PessoaJuridica pj1 = new PessoaJuridica("Jaime", 3, "7361723");
-        PessoaJuridica pj2 = new PessoaJuridica("Vanessa", 4, "545645");
-        
-        repo3.inserir(pj1);
-        repo3.inserir(pj2);
-        repo3.persistir("pessoasjuridicas");
-        
-        PessoaJuridicaRepo repo4 = new PessoaJuridicaRepo();
-        
-        repo4.recuperar("pessoasjuridicas");
-        repo4.obterTodos();
-        
-       
-
-       
-
-
-        
-        
-        
-        
-        
-       
-        
-       
+    public static void limparTela() {
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
     }
-    
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PessoaFisicaRepo repoFisica = new PessoaFisicaRepo();
+        PessoaJuridicaRepo repoJuridica = new PessoaJuridicaRepo();
+
+        int opcao;
+        int opcaoFisicaJuridica;
+
+        do {
+            System.out.println("Escolha uma opcao:");
+            System.out.println("1 - Incluir");
+            System.out.println("2 - Alterar");
+            System.out.println("3 - Excluir");
+            System.out.println("4 - Exibir pelo ID");
+            System.out.println("5 - Exibir todos");
+            System.out.println("6 - Salvar dados");
+            System.out.println("7 - Recuperar dados");
+            System.out.println("0 - Finalizar");
+            opcao = scanner.nextInt();
+            limparTela();
+
+            switch (opcao) {
+                case 1:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+                            PessoaFisica pf = new PessoaFisica(null, 0, 0, null);
+                            System.out.println("Nome: ");
+                            pf.setNome(scanner.next());
+                            limparTela();
+                            System.out.println("Id: ");
+                            pf.setId(scanner.nextInt());
+                            limparTela();
+                            System.out.println("Idade: ");
+                            pf.setIdade(scanner.nextInt());
+                            limparTela();
+                            System.out.println("CPF: ");
+                            pf.setCpf(scanner.next());
+                            limparTela();
+                            System.out.println("Deseja Incluir Pessoa Fisica? \n");
+                            pf.exibir();
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+
+                            if (opcaoFisicaJuridica == 1) {
+                                repoFisica.inserir(pf);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                        if (opcaoFisicaJuridica == 2) {
+                            PessoaJuridica pj = new PessoaJuridica(null, 0, null);
+                            System.out.println("Nome: ");
+                            pj.setNome(scanner.next());
+                            limparTela();
+                            System.out.println("Id: ");
+                            pj.setId(scanner.nextInt());
+                            limparTela();
+                            System.out.println("CNPJ: ");
+                            pj.setCnpj(scanner.next());
+                            limparTela();
+                            System.out.println("Deseja Incluir Pessoa Juridica? \n");
+                            pj.exibir();
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+
+                            if (opcaoFisicaJuridica == 1) {
+                                repoJuridica.inserir(pj);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 2:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+                            PessoaFisica pf = new PessoaFisica(null, 0, 0, null);
+                            int id = 0;
+                            System.out.println("Qual o Id desejado? "); //dando merda aq
+                            id = scanner.nextInt();
+                            limparTela();
+                            repoFisica.obter(id);
+                            opcaoFisicaJuridica = 0;
+                            System.out.println("");
+                            System.out.println("Nome: ");
+                            pf.setNome(scanner.next());
+                            limparTela();
+                            System.out.println("Id: ");
+                            pf.setId(scanner.nextInt());
+                            limparTela();
+                            System.out.println("Idade: ");
+                            pf.setIdade(scanner.nextInt());
+                            limparTela();
+                            System.out.println("CPF: ");
+                            pf.setCpf(scanner.next());
+                            limparTela();
+                            System.out.println("Deseja Editar Pessoa Fisica? \n");
+                            pf.exibir();
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+
+                            if (opcaoFisicaJuridica == 1) {
+                                repoFisica.alterar(id, pf);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                        if (opcaoFisicaJuridica == 2) {
+                            PessoaJuridica pj = new PessoaJuridica(null, 0, null);
+                            int id = 0;
+                            System.out.println("Qual o Id desejado? "); 
+                            id = scanner.nextInt();
+                            limparTela();
+                            repoJuridica.obter(id);
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                            System.out.println("Nome: ");
+                            pj.setNome(scanner.next());
+                            limparTela();
+                            System.out.println("Id: ");
+                            pj.setId(scanner.nextInt());
+                            limparTela();
+                            System.out.println("CNPJ: ");
+                            pj.setCnpj(scanner.next());
+                            limparTela();
+                            System.out.println("Deseja Editar Pessoa Juridica? \n");
+                            pj.exibir();
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+
+                            if (opcaoFisicaJuridica == 1) {
+                                repoJuridica.alterar(id, pj);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 3:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+
+                            System.out.println("Qual o Id da Pessoa Física? ");
+                            int id = scanner.nextInt();
+                            limparTela();
+                            repoFisica.obter(id);
+                            System.out.println("Deseja Deletar Pessoa Fisica? \n");
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            if (opcaoFisicaJuridica == 1) {
+                                repoFisica.excluir(id);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                        if (opcaoFisicaJuridica == 2) {
+                            System.out.println("Qual o Id da Pessoa Juridica? ");
+                            int id = scanner.nextInt();
+                            limparTela();
+                            repoJuridica.obter(id);
+                            System.out.println("Deseja Deletar Pessoa Juridica? \n");
+                            System.out.println("\n1 - Sim");
+                            System.out.println("0 - Nao");
+                            opcaoFisicaJuridica = scanner.nextInt();
+
+                            if (opcaoFisicaJuridica == 1) {
+                                repoJuridica.excluir(id);
+                            }
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 4:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+
+                            System.out.println("Qual o Id da Pessoa Física? ");
+                            int id = scanner.nextInt();
+                            limparTela();
+                            repoFisica.obter(id);
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                        if (opcaoFisicaJuridica == 2) {
+                            System.out.println("Qual o Id da Pessoa Juridica? ");
+                            int id = scanner.nextInt();
+                            limparTela();
+                            repoJuridica.obter(id);
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 5:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+                            repoFisica.obterTodos();
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+
+                        if (opcaoFisicaJuridica == 2) {
+                            repoJuridica.obterTodos();
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 6:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+
+                            System.out.println("Qual o Prefixo Desejado? ");
+                            String prefixo = scanner.next();
+                            limparTela();
+                            repoFisica.persistir(prefixo + ".fisica.bin");
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+                        }
+
+                        if (opcaoFisicaJuridica == 2) {
+                            System.out.println("Qual o Prefixo Desejado? ");
+                            String prefixo = scanner.next();
+                            limparTela();
+                            repoJuridica.persistir(prefixo + ".juridica.bin");
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 7:
+                    do {
+                        System.out.println("Escolha uma opcao:");
+                        System.out.println("1 - Pessoa Fisica");
+                        System.out.println("2 - Pessoa Juridica");
+                        System.out.println("0 - Voltar");
+                        opcaoFisicaJuridica = scanner.nextInt();
+                        limparTela();
+
+                        if (opcaoFisicaJuridica == 1) {
+
+                            System.out.println("Qual o Prefixo Desejado? ");
+                            String prefixo = scanner.next();
+                            limparTela();
+                            repoFisica.recuperar(prefixo + ".fisica.bin");
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+
+                        if (opcaoFisicaJuridica == 2) {
+                            System.out.println("Qual o Prefixo Desejado? ");
+                            String prefixo = scanner.next();
+                            limparTela();
+                            repoJuridica.recuperar(prefixo + ".juridica.bin");
+                            System.out.println("\n0 - Voltar");
+                            opcaoFisicaJuridica = scanner.nextInt();
+                            opcaoFisicaJuridica = 0;
+                            limparTela();
+
+                        }
+                    } while (opcaoFisicaJuridica != 0);
+                    break;
+                case 0:
+                    System.out.println("Finalizando a execução.");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+        } while (opcao != 0);
+
+    }
+
 }
